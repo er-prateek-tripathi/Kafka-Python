@@ -1,0 +1,20 @@
+This process is done with Terminal only
+
+To start zookeeper
+C:\Kafka\bin\windows\zookeeper-server-start.bat C:\Kafka\config\zookeeper.properties
+
+To start kafka server
+C:\Kafka\bin\windows\kafka-server-start.bat C:\Kafka\config\server.properties
+
+Create Topics
+C:\Kafka\bin\windows\kafka-topics.bat --create --topic hello_world --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+Start Producer
+C:\Kafka\bin\windows\kafka-console-producer.bat --topic hello_world --bootstrap-server localhost:9092
+
+Start Consumer
+C:\Kafka\bin\windows\kafka-console-consumer.bat --topic hello_world --from-beginning --bootstrap-server localhost:9092
+
+Type msg in Producer terminal and hit Enter
+The msg will be visible on Consumer Terminal
+
